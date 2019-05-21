@@ -1,0 +1,23 @@
+{
+  "name": "be-gql-consultainfopersonal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Roger Cruz",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "casual": "^1.6.0",
+    "express": "^4.17.0",
+    "graphql": "^14.3.0",
+    "graphql-server-express": "^1.4.0",
+    "graphql-tools": "^4.0.4",
+    "knex": "^0.16.5",
+    "objection": "^1.6.9",
+    "sqlite3": "^4.0.8"
+  }
+}
