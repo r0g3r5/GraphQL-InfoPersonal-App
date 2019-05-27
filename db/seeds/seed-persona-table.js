@@ -9,8 +9,9 @@ exports.seed = (knex, Promise) => {
           return knex("personas").insert([
             {
               id: i + 1,
+              ci: casual.integer(100, 500),
               nombres: casual.name,
-              apellidos: casual.name,
+              apellidos: casual.city,
               descripcion: casual.sentences(2),
               genero: casual.random_element(["MASCULINO", "FEMENINO"])
             }

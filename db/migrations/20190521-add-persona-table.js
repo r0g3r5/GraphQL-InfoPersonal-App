@@ -5,6 +5,7 @@ exports.up = (knex, Promise) => {
         .increments("id")
         .primary()
         .unsigned();
+      table.string("ci");
       table.string("nombres");
       table.string("apellidos");
       table.string("descripcion");

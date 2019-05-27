@@ -1,13 +1,14 @@
 const { Model } = require("objection");
 const path = require("path");
 
-class Pasateimpo extends Model {
+class Pasatiempo extends Model {
   static get tableName() {
     return "pasatiempos";
   }
   static get relationMappings() {
+    
     return {
-      pasatiempos: {
+      persona: {
         relation: Model.HasManyRelation,
         modelClass: path.join(__dirname, "/Persona"),
         join: {
@@ -18,3 +19,4 @@ class Pasateimpo extends Model {
     };
   }
 }
+module.exports = Pasatiempo;

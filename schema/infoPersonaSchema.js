@@ -4,7 +4,7 @@ const Pasatiempo = require("../model/Pasatiempo");
 
 const personaSchemaDefs = `type Persona {
                     id:ID!
-                    ci:Int!,
+                    ci:String!,
                     nombres:String!, 
                     apellidos:String
                     descripcion:String
@@ -27,15 +27,11 @@ const personaSchemaDefs = `type Persona {
 
 const resolvers = {
   Query: {
-    personas: () => Persona.query()     
-  },
-  Persona: {
-    pasatiempos: () => {
-      return [
-        { actividad: "Desarrollar", nivelGusto: 10 },
-        { actividad: "Ver Series", nivelGusto: 8 }
-      ];
-    }
+    personas: () => Persona.query().eager("pasatiempos"),
+    personaById: (rootValue, args) =>
+      Persona.query()
+        .findById(args.id)
+        .eager("pasatiempos")
   }
 };
 
