@@ -18,7 +18,7 @@
     "graphql": "^14.3.0",
     "graphql-server-express": "^1.4.0",
     "graphql-tools": "^4.0.4",
-    "knex": "^0.16.5",
+    "knex": "^0.20.1",
     "objection": "^1.6.9",
     "sqlite3": "^4.0.8"
   }
